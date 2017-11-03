@@ -8,15 +8,15 @@ router.get('/', function(req, res, next) {
 
 var rps = [
   {
-    name: 'rock',
+    name: 'Rock',
     avatarUrl: 'https://png.icons8.com/fist/p1em/1600'
   },
   {
-    name: 'paper',
-    avatarUrl: 'https://cdn2.iconfinder.com/data/icons/hawcons-gesture-stroke/32/icon_3_high_five-512.png'
+    name: 'Paper',
+    avatarUrl: 'http://www.iconarchive.com/download/i88180/icons8/ios7/Hands-Hand.ico'
   },
   {
-    name: 'scissors',
+    name: 'Scissors',
     avatarUrl: 'https://maxcdn.icons8.com/Share/icon/p1em/Hands//hand_scissors1600.png'
   }
   ];
@@ -32,6 +32,14 @@ var outcomes = [
   {
     name: 'highfive',
     avatarUrl: 'https://hdwallsbox.com/wallpapers/m/33/sharks-high-five-gorillas-explosion-gorila-m32973.jpg'
+  },
+  {
+    name: 'win',
+    avatarUrl: 'https://media.consumeraffairs.com/files/news/winner.jpg'
+  },
+  {
+    name: 'lose',
+    avatarUrl: 'https://www.choicenotchance.org.nz/files/you-lose-banner-sm-%40x2.png'
   }
 ];
 
