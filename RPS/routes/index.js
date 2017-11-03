@@ -20,6 +20,7 @@ var rps = [
     avatarUrl: 'https://maxcdn.icons8.com/Share/icon/p1em/Hands//hand_scissors1600.png'
   }
   ];
+  
 var outcomes = [
   {
     name: 'fistbump',
