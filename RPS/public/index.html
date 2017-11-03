@@ -5,20 +5,20 @@
 <script src="javascripts/app.js"></script>
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
   <meta charset="utf-8">
-  <title>Node api tutorial</title>
+  <title>Rock Paper Scissors</title>
 </head>
 <body>
-
+  <h1>Rock, Paper, Scissors!</h1>
   <div id='app' ng-app='app' ng-controller='mainCtrl'>
 
-    <div ng-if='!pokemon.length' class='no-pokemon center stretch'>
+    <div ng-if='!rps.length' class='no-rps center stretch'>
       <h1 class='h1'>
         Set up your endpoint at `/rps` to get this view working
       </h1>
     </div>
 
-    <ul ng-if='pokemon.length' class='list center stretch'>
-      <li ng-repeat='p in pokemon' class='pokemon'>
+    <ul ng-if='rps.length' class='list center stretch'>
+      <li ng-repeat='p in rps' class='rps'>
         <h1>{{ p.name }}</h1>
         <img class='avatar' ng-src="{{p.avatarUrl}}" />
       </li>

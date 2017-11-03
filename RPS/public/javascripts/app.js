@@ -1,9 +1,9 @@
 var app = window.angular.module('app', [])
 
-app.factory('pokemonFetcher', pokemonFetcher)
+app.factory('rpsFetcher', rpsFetcher)
 app.controller('mainCtrl', mainCtrl)
 
-function pokemonFetcher ($http) {
+function rpsFetcher ($http) {
 
   var API_ROOT = 'RPS'
   return {
@@ -18,12 +18,12 @@ function pokemonFetcher ($http) {
 
 }
 
-function mainCtrl ($scope, pokemonFetcher) {
+function mainCtrl ($scope, rpsFetcher) {
 
-  $scope.pokemon = []
+  $scope.rps = []
 
-  pokemonFetcher.get()
+  rpsFetcher.get()
     .then(function (data) {
-      $scope.pokemon = data
+      $scope.rps = data
     })
 }
