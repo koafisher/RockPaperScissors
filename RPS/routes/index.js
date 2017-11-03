@@ -70,7 +70,6 @@ router.get('/rps',function(req, res, next) {
   res.send(rps);
 });
 
-//var WLT = ['Win', 'Lose', 'Tie'];
 
 var rand = 0;
 
