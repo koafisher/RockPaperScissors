@@ -11,10 +11,10 @@
   <div id='app' ng-app='app' ng-controller='mainCtrl'>
     <h1>Choose Your Fate!</h1>
     
-    <div ng-if='result!=null' class='list center stretch'>
+    <div ng-if='result!=null' class='list stretch'>
       <h1> Game Outcome </h1>
-      <p> click pic to play again. </p>
       <img class='avatar' ng-src="{{result.avatarUrl}}" ng-click="goBack();"/>
+      <p> click pic to play again. </p>
     </div>
     
     <div ng-if='!rps.length' class='no-rps center stretch'>
