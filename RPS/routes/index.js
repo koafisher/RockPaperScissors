@@ -18,23 +18,29 @@ var rps = [
   {
     name: 'scissors',
     avatarUrl: 'https://maxcdn.icons8.com/Share/icon/p1em/Hands//hand_scissors1600.png'
-  },
+  }
+  ];
+var outcomes = [
   {
     name: 'fistbump',
     avatarUrl: 'https://i.pinimg.com/736x/08/15/30/0815301a7d7f908cfa45778278db7bd8--logo-ideas.jpg'
   },
   {
-    name: 'scissors',
-    avatarUrl: 'https://maxcdn.icons8.com/Share/icon/p1em/Hands//hand_scissors1600.png'
+    name: 'scissorstie',
+    avatarUrl: 'http://aceimpression.com/wp-content/uploads/2015/04/cuttingties.jpg'
   },
   {
-    name: 'scissors',
-    avatarUrl: 'https://maxcdn.icons8.com/Share/icon/p1em/Hands//hand_scissors1600.png'
+    name: 'highfive',
+    avatarUrl: 'https://hdwallsbox.com/wallpapers/m/33/sharks-high-five-gorillas-explosion-gorila-m32973.jpg'
   }
 ];
 
 router.get('/rps',function(req, res, next) {
   res.send(rps);
+});
+
+router.get('/rock',function(req, res, next) {
+  
 });
 
 module.exports = router;
