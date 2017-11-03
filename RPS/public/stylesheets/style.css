@@ -17,7 +17,7 @@ div, ul {
   height: 100%;
 }
 
-.no-pokemon {
+.no-rps {
   background-color: #ED5565;
 }
 
@@ -33,7 +33,7 @@ div, ul {
   color: white;
 }
 
-.pokemon {
+.rps {
   padding: 20px;
 }
 
