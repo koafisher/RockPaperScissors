@@ -56,6 +56,14 @@ function mainCtrl ($scope, rpsFetcher, $http) {
       $scope.rps = data
     })
     
+  $scope.goBack = function() {
+    rpsFetcher.get()
+      .then(function (data) {
+        $scope.rps = data
+        $scope.result = null
+      })
+  }
+    
   $scope.DoSomething = function(selection) {
     console.log(selection)
     
