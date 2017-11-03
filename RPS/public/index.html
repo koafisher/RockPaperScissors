@@ -23,7 +23,7 @@
     <ul ng-if='rps.length && result==null' class='list center stretch'>
       <li ng-repeat='p in rps' class='rps'>
         <h1>{{ p.name }}</h1>
-        <img class='avatar' ng-src="{{p.avatarUrl}}" onclick="DoSomething(p.name);" />
+        <img class='avatar' ng-src="{{p.avatarUrl}}" ng-onclick="DoSomething({{p.name}});" />
       </li>
     </ul>
 
