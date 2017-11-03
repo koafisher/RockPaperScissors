@@ -38,7 +38,7 @@ function rpsFetcher ($http) {
       var scissor = "/scissor";
       return $http
         .get(scissor)
-        .them(function (resp) {
+        .then(function (resp) {
           return resp.data
         })
     }
