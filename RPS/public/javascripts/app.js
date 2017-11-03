@@ -57,6 +57,7 @@ function mainCtrl ($scope, rpsFetcher, $http) {
     })
     
   $scope.DoSomething = function(selection) {
+    console.log(selection)
     
     if(selection === "rock") {
       rpsFetcher.getRock()
