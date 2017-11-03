@@ -59,12 +59,12 @@ function mainCtrl ($scope, rpsFetcher, $http) {
   $scope.DoSomething = function(selection) {
     console.log(selection)
     
-    if(selection === "rock") {
+    if(selection === "Rock") {
       rpsFetcher.getRock()
         .then(function (data){
           $scope.result = data;
         })
-    } else if (selection === "paper") {
+    } else if (selection === "Paper") {
       rpsFetcher.getPaper()
         .then(function (data){
           $scope.result = data;
