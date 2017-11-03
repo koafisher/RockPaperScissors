@@ -9,17 +9,21 @@
 </head>
 <body>
   <div id='app' ng-app='app' ng-controller='mainCtrl'>
-    <h1>Rock, Paper, Scissors!</h1>
+    <h1>Choose Your Fate!</h1>
+    <div ng-if='result!=null' class='final outcome'>
+      <h1> Game Outcome</h1>
+      <img class='avatar' ng-src="{{result.avatarUrl}}"/>
+    </div>
     <div ng-if='!rps.length' class='no-rps center stretch'>
       <h1 class='h1'>
         Set up your endpoint at `/rps` to get this view working
       </h1>
     </div>
 
-    <ul ng-if='rps.length' class='list center stretch'>
+    <ul ng-if='rps.length && result==null' class='list center stretch'>
       <li ng-repeat='p in rps' class='rps'>
         <h1>{{ p.name }}</h1>
-        <img class='avatar' ng-src="{{p.avatarUrl}}" onclick="DoSomething(p.);" />
+        <img class='avatar' ng-src="{{p.avatarUrl}}" onclick="DoSomething(p.name);" />
       </li>
     </ul>
 

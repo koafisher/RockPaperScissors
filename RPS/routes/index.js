@@ -21,18 +21,40 @@ var rps = [
   }
   ];
   
-var outcomes = [
+var rockOutcomes = [
   {
     name: 'fistbump',
     avatarUrl: 'https://i.pinimg.com/736x/08/15/30/0815301a7d7f908cfa45778278db7bd8--logo-ideas.jpg'
   },
   {
-    name: 'scissorstie',
-    avatarUrl: 'http://aceimpression.com/wp-content/uploads/2015/04/cuttingties.jpg'
+    name: 'win',
+    avatarUrl: 'https://media.consumeraffairs.com/files/news/winner.jpg'
   },
+  {
+    name: 'lose',
+    avatarUrl: 'https://www.choicenotchance.org.nz/files/you-lose-banner-sm-%40x2.png'
+  }
+];
+
+var paperOutcomes = [
   {
     name: 'highfive',
     avatarUrl: 'https://hdwallsbox.com/wallpapers/m/33/sharks-high-five-gorillas-explosion-gorila-m32973.jpg'
+  },
+  {
+    name: 'win',
+    avatarUrl: 'https://media.consumeraffairs.com/files/news/winner.jpg'
+  },
+  {
+    name: 'lose',
+    avatarUrl: 'https://www.choicenotchance.org.nz/files/you-lose-banner-sm-%40x2.png'
+  }
+];
+
+var scissorOutcomes = [
+  {
+    name: 'scissorstie',
+    avatarUrl: 'http://aceimpression.com/wp-content/uploads/2015/04/cuttingties.jpg'
   },
   {
     name: 'win',
@@ -53,17 +75,17 @@ router.get('/rps',function(req, res, next) {
 var rand = 0;
 
 router.get('/rock',function(req, res, next) {
-  rand = outcomes[Math.floor(Math.random() * 3)];
+  rand = rockOutcomes[Math.floor(Math.random() * 3)];
   res.send(rand);
 });
 
 router.get('/paper',function(req, res, next) {
-  rand = outcomes[Math.floor(Math.random() * 3)];
+  rand = paperOutcomes[Math.floor(Math.random() * 3)];
   res.send(rand);
 });
 
 router.get('/scissor',function(req, res, next) {
-  rand = outcomes[Math.floor(Math.random() * 3)];
+  rand = scissorOutcomes[Math.floor(Math.random() * 3)];
   res.send(rand);
 });
 

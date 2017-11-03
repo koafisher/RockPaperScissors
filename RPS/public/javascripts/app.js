@@ -13,12 +13,36 @@ function rpsFetcher ($http) {
         .then(function (resp) {
           return resp.data
         })
+    },
+    getRock: function () {
+      var rock = "/rock";
+      return $http
+        .get(rock)
+        .them(function (resp) {
+          return resp.data
+        })
+    },
+    getPaper: function () {
+      var paper = "/paper";
+      return $http
+        .get(paper)
+        .them(function (resp) {
+          return resp.data
+        })
+    },
+    getScissor: function () {
+      var scissor = "/scissor";
+      return $http
+        .get(scissor)
+        .them(function (resp) {
+          return resp.data
+        })
     }
   }
 
 }
 
-function mainCtrl ($scope, rpsFetcher) {
+function mainCtrl ($scope, rpsFetcher, $http) {
 
   $scope.rps = []
 
@@ -26,4 +50,26 @@ function mainCtrl ($scope, rpsFetcher) {
     .then(function (data) {
       $scope.rps = data
     })
+    
+  $scope.DoSomething = function(selection) {
+    
+    if(selection === "rock") {
+      rpsFetcher.getRock()
+        .then(function (data){
+          $scope.result = data;
+        })
+    } else if (selection === "paper") {
+      rpsFetcher.getPaper()
+        .then(function (data){
+          $scope.result = data;
+        })
+    } else {
+      rpsFetcher.getScissor()
+        .then(function (data){
+          $scope.result = data;
+        })
+    }
+    
+  };
+  
 }
