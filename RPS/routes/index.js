@@ -39,8 +39,23 @@ router.get('/rps',function(req, res, next) {
   res.send(rps);
 });
 
+//var WLT = ['Win', 'Lose', 'Tie'];
+
+var rand = 0;
+
 router.get('/rock',function(req, res, next) {
-  
+  rand = outcomes[Math.floor(Math.random() * 3)];
+  res.send(rand);
+});
+
+router.get('/paper',function(req, res, next) {
+  rand = outcomes[Math.floor(Math.random() * 3)];
+  res.send(rand);
+});
+
+router.get('/scissor',function(req, res, next) {
+  rand = outcomes[Math.floor(Math.random() * 3)];
+  res.send(rand);
 });
 
 module.exports = router;
