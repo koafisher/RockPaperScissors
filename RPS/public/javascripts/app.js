@@ -7,6 +7,7 @@ function rpsFetcher ($http) {
 
   var API_ROOT = 'RPS'
   return {
+    
     get: function () {
       return $http
         .get(API_ROOT)
@@ -14,22 +15,25 @@ function rpsFetcher ($http) {
           return resp.data
         })
     },
+    
     getRock: function () {
       var rock = "/rock";
       return $http
         .get(rock)
-        .them(function (resp) {
+        .then(function (resp) {
           return resp.data
         })
     },
+    
     getPaper: function () {
       var paper = "/paper";
       return $http
         .get(paper)
-        .them(function (resp) {
+        .then(function (resp) {
           return resp.data
         })
     },
+    
     getScissor: function () {
       var scissor = "/scissor";
       return $http
@@ -38,6 +42,7 @@ function rpsFetcher ($http) {
           return resp.data
         })
     }
+    
   }
 
 }
